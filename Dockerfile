@@ -5,7 +5,7 @@ LABEL authors="Alejandro Such <alejandro.such@gmail.com> , Mihai Bob <mihai.m.bo
 ARG ANGULAR_CLI_VERSION=latest
 
 RUN apk update \
-  && apk add --update alpine-sdk python3 \
+  && apk add --update alpine-sdk python3 git \
   && yarn global add @angular/cli@$ANGULAR_CLI_VERSION \
   && ng config --global cli.packageManager yarn \
   && apk del alpine-sdk python3 \
