@@ -1,8 +1,9 @@
-FROM node:16.20.2-alpine3.18
+FROM node:18.18.0-alpine
 
 LABEL authors="Alejandro Such <alejandro.such@gmail.com> , Mihai Bob <mihai.m.bob@gmail.com>, Dinei A. Rockenbach <dineiar@gmail.com>"
 
 ARG ANGULAR_CLI_VERSION=latest
+ENV NG_CLI_ANALYTICS=false
 
 RUN apk update \
   && apk add --update alpine-sdk python3 git \
